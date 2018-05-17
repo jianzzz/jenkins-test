@@ -4,7 +4,7 @@ pipeline {
     stage('Preparation') {
       steps {
         echo 'Preparation'
-        git 'https://github.com/jianzzz/jenkins-test.git'
+        sh 'hello'
       }
     }
     stage('Build') {
@@ -15,7 +15,6 @@ pipeline {
     stage('Results') {
       steps {
         echo 'Results'
-        sleep(unit: 'SECONDS', time: 1)
       }
     }
   }
