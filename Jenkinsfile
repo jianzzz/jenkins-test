@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Preparation'
         sh 'hello'
+        timeout(time: 1, activity: true)
       }
     }
     stage('Build') {
