@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        tm 'abc'
+        script {
+          println "Hello World!"
+        }
+
       }
     }
     stage('Build') {
