@@ -3,12 +3,7 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        script {
-          echo "register run.."
-          echo "register run.."
-          echo "register run.."
-        }
-
+        tm 'abc'
       }
     }
     stage('Build') {
