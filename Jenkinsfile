@@ -9,7 +9,6 @@ pipeline {
         retry(count: 1)
         sleep 1
         bat(returnStatus: true, returnStdout: true, encoding: 'utf8', script: '/test/')
-        sh 'function a(){}'
       }
     }
     stage('Build') {
