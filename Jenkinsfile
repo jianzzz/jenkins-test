@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        echo '1'
-        catchError() {
-          echo '12'
+        script {
+          echo "register run.."
+          echo "register run.."
+          echo "register run.."
         }
 
       }
