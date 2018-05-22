@@ -1,16 +1,16 @@
 pipeline {
-  agent {
-    docker {
-      image '12'
-      args '12'
-    }
-
-  }
+  agent none
   stages {
     stage('Preparation') {
       steps {
         sh '''echo 1;
 ls /tmp;'''
+        echo '1212'
+        timeout(time: 1, activity: true) {
+          sh '12'
+          echo '12'
+        }
+
       }
     }
     stage('Build') {
