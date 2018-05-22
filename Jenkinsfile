@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        load 'test.groovy'
+        script {
+          echo 1
+        }
+
       }
     }
     stage('Results') {
