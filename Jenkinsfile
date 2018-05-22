@@ -6,21 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('Preparation') {
-      steps {
-        node(label: 'test') {
-          echo '1'
-        }
-
-        ws(dir: '/tmp') {
-          echo '1'
-        }
-
-      }
-    }
     stage('Build') {
       steps {
-        echo '1'
+        build(job: 'job', propagate: true, quietPeriod: 2, wait: true)
       }
     }
     stage('Results') {
