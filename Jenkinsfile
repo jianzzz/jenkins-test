@@ -3,18 +3,13 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        sh '''echo 1;
-ls /tmp;'''
-        echo '1212'
-        timeout(time: 1, activity: true) {
-          sh '12'
-          echo '12'
-        }
-
-        retry(count: 2) {
-          echo '1'
-        }
-
+        sleep(time: 1, unit: 'SECONDS')
+        sleep(time: 2, unit: 'MINUTES')
+        sleep(time: 1, unit: 'HOURS')
+        sleep(time: 1, unit: 'DAYS')
+        sleep(time: 1, unit: 'NANOSECONDS')
+        sleep(time: 1, unit: 'MICROSECONDS')
+        sleep(time: 1, unit: 'MILLISECONDS')
       }
     }
     stage('Build') {
