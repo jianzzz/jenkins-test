@@ -11,6 +11,10 @@ ls /tmp;'''
           echo '12'
         }
 
+        retry(count: 2) {
+          echo '1'
+        }
+
       }
     }
     stage('Build') {
