@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          echo 1
+          echo "1"
         }
 
       }
