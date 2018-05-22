@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        build(job: 'job', propagate: true, quietPeriod: 2, wait: true)
+        load 'test.groovy'
       }
     }
     stage('Results') {
