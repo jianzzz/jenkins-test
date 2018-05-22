@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'test'
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
       steps {
@@ -16,5 +11,8 @@ pipeline {
         echo '1'
       }
     }
+  }
+  environment {
+    e1 = '1'
   }
 }
