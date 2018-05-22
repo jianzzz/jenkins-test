@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        archiveArtifacts(allowEmptyArchive: true, caseSensitive: true, defaultExcludes: true, fingerprint: true, onlyIfSuccessful: true, artifacts: 'artifact', excludes: 'excludes')
+        node(label: 'node') {
+          echo '1'
+        }
+
+        ws(dir: '/tmp') {
+          echo '1'
+        }
+
       }
     }
     stage('Build') {
