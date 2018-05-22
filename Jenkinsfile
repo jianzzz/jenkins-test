@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        sleep(time: 1, unit: 'SECONDS')
-        sleep(time: 2, unit: 'MINUTES')
-        sleep(time: 1, unit: 'HOURS')
-        sleep(time: 1, unit: 'DAYS')
-        sleep(time: 1, unit: 'NANOSECONDS')
-        sleep(time: 1, unit: 'MICROSECONDS')
-        sleep(time: 1, unit: 'MILLISECONDS')
+        timeout(time: 1, unit: 'MINUTES')
+        timeout(unit: 'HOURS', time: 1)
+        timeout(unit: 'DAYS', time: 1)
+        timeout(time: 1, unit: 'NANOSECONDS')
+        timeout(time: 1, unit: 'MICROSECONDS')
+        timeout(time: 1, unit: 'MILLISECONDS')
+        bat(script: '/tmp/run.bat', encoding: 'utf8', returnStatus: true, returnStdout: true)
       }
     }
     stage('Build') {
