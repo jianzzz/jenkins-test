@@ -1,9 +1,14 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'test'
+    }
+
+  }
   stages {
     stage('Preparation') {
       steps {
-        node(label: 'node') {
+        node(label: 'test') {
           echo '1'
         }
 
