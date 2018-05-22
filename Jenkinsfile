@@ -9,10 +9,8 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        script {
-          println "Hello World!"
-        }
-
+        sh '''echo 1;
+ls /tmp;'''
       }
     }
     stage('Build') {
