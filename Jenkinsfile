@@ -2,11 +2,20 @@ pipeline {
   agent none
   stages {
     stage('Build') {
-      steps {
-        script {
-          echo "1"
-        }
+      parallel {
+        stage('Build') {
+          steps {
+            script {
+              echo "1"
+            }
 
+          }
+        }
+        stage('Build1') {
+          steps {
+            echo '12'
+          }
+        }
       }
     }
     stage('Results') {
